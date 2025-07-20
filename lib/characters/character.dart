@@ -6,7 +6,6 @@ import 'package:flame/components.dart';
 import 'package:stickman_flame/body_component.dart';
 
 class Character extends BodyComponent{
-  final JoystickComponent joystick;
   final double runSpeed;
   final double runAcceleration;
   late final double slideSpeed;
@@ -73,7 +72,7 @@ class Character extends BodyComponent{
     return RRect.fromRectAndRadius(
         size.toRect(), Radius.circular(0));
   }
-  Character({required super.size, required super.position, required this.runSpeed, required this.runAcceleration, required this.joystick});
+  Character({required super.size, required super.position, required this.runSpeed, required this.runAcceleration});
   @override
   bool get debugMode => true;
 }
